@@ -7,20 +7,19 @@ package edu.fiu.surya.roomba;
  * @author Student
  *
  */
-public class InfraredSensor {
-	private String dimension;
+public class EdgeSensor {
 	private String range;
+	private String dimension;
 	private String manufacturer;
-	private int detectionangle;
 	
-	public void detectObstacle()
+	public void detectCliff()
 	{
-		// Infrared Sensor sends infrared waves to detect any Obstacles
+		// Edge Sensor detects the depth and fall to avoid any Cliff
 	}
 	
 	public void mapFloor()
 	{
 		// the information provided by the sensor helps build the Map
 	}
-
-}	
+   
+}
