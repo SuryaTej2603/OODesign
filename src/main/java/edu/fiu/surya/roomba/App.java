@@ -3,11 +3,14 @@
  */
 package edu.fiu.surya.roomba;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 /**
  * @author Student
  *
  */
-public class App {
+public class App implements SelfCheckCapable {
 	private double version;
 	private String developer;
 	private String size;
@@ -51,6 +54,18 @@ public class App {
 	public void createZone()
 	{
 		// on Maps, zones are created so that specific areas can be avoided and specific areas can be repeatedly cleaned
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "App";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
 	}
 	
 }

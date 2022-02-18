@@ -3,11 +3,14 @@
  */
 package edu.fiu.surya.roomba;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 /**
  * @author Student
  *
  */
-public class ProcessingUnit {
+public class ProcessingUnit implements SelfCheckCapable{
 	private String Processor;
 	private String manufacturer;
 	private String transmitter;
@@ -41,6 +44,18 @@ public class ProcessingUnit {
 	public void activateMotor()
 	{
 		// Processing Unit turns the Motor on as soon as the Vacuum command is given
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "ProcessingUnit";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
 	}
 
 }
